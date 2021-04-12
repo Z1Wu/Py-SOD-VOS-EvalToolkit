@@ -26,7 +26,7 @@ class MetricRecorder(object):
         self.em.step(pre, gt)
         self.wfm.step(pre, gt)
 
-    def show(self, bit_num=3) -> dict:
+    def show(self, bit_num=5) -> dict:
         fm_info = self.fm.get_results()
         fm = fm_info["fm"]
         pr = fm_info["pr"]

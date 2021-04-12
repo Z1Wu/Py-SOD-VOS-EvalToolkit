@@ -2,14 +2,14 @@
 
 from matplotlib import colors
 
-_COLOR_Genarator = iter(
-    sorted(
+_COLOR_Genarator = iter( # don't 
+    # sorted(
         [
             color
-            for name, color in colors.cnames.items()
+            for name, color in colors.cnames.items() # red for ours
             if name not in ["red", "white"] or not name.startswith("light") or "gray" in name
         ]
-    )
+    # )
 )
 
 
@@ -17,14 +17,14 @@ def curve_info_generator():
     line_style_flag = True
 
     def _template_generator(
-        method_info: dict, method_name: str, line_color: str = None, line_width: int = 2
+        method_info: dict, method_name: str, line_color: str = None, line_width: int = 2, line_label = None, line_style = None,
     ) -> dict:
         nonlocal line_style_flag
         template_info = dict(
             path_dict=method_info,
             curve_setting=dict(
-                line_style="-" if line_style_flag else "--",
-                line_label=method_name,
+                line_style= line_style or ("-" if line_style_flag else "--"),
+                line_label=line_label or method_name,
                 line_width=line_width,
             ),
         )

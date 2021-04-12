@@ -116,7 +116,7 @@ def cal_all_metrics():
                 continue
 
             grouped_name_list = group_names(names=eval_name_list)
-            print(
+            print(  
                 f" ==>> It is evaluating {method_name} with"
                 f" {len(eval_name_list)} images and {len(grouped_name_list)} groups"
                 f" (G:{len(gt_name_list)},P:{len(pre_name_list)}) images <<== "
@@ -268,7 +268,7 @@ if __name__ == "__main__":
                 "y_lim": (0, 0.9),  # 纵坐标显示范围
             },
         },
-        "bit_num": 3,  # 评估结果保留的小数点后数据的位数
+        "bit_num": 5,  # 评估结果保留的小数点后数据的位数
         "resume_record": True,  # 是否保留之前的评估记录（针对record_path文件有效）
         "skipped_names": [],
     }

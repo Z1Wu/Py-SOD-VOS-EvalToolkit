@@ -1,15 +1,23 @@
 /waiting/
-/output/
+/output*
 better_visual_collect.py
 output/all_record.txt
+data
+z_*
+_a_obj_all
+_bg_all
 
 # Big files
 output/
 my_methods/
 **/*.png
+**/*.jpg
 **/*.zip
 **/*.7z
 **/*.rar
+
+
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
